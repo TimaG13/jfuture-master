@@ -8,6 +8,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="src/bootstrap3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/bootstrap3/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="src/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="src/slick-1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
@@ -37,66 +39,78 @@
     <div class="container-fluid wrapper">
         <header class="header">
             <div class="wr-logo">
-                <a class="logo-link" href="index.html">
+                <a class="navbar-brand logo-link" href="index.html">
                     <img src="dist/img/logo.png" alt="logo">
                 </a>
             </div>
-            <nav class="wr-nav">
-                <ul>
-                    <li><a class="text-uppercase" href="#">jfuture</a></li>
-                    <li><a class="text-uppercase" href="#">почему мы</a></li>
-                    <li><a class="text-uppercase" href="#">принципы</a></li>
-                    <li><a class="text-uppercase" href="#">обучение</a></li>
-                    <li><a class="text-uppercase" href="#">связь с нами</a></li>
-                    <li><a class="text-uppercase" href="#">скачать</a></li>
-                </ul>
+            <nav class="wr-nav navbar">
+                <button type="button" class="my-mob-btn collapsed navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-9" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                    <ul class="nav navbar-nav">
+                        <li><a class="text-uppercase text-center active" href="#">jfuture</a></li>
+                        <li><a class="text-uppercase text-center" href="#">почему мы</a></li>
+                        <li><a class="text-uppercase text-center" href="#">принципы</a></li>
+                        <li><a class="text-uppercase text-center" href="#">обучение</a></li>
+                        <li><a class="text-uppercase text-center" href="#">связь с нами</a></li>
+                        <li><a class="text-uppercase text-center" href="#">скачать</a></li>
+                    </ul>
+                </div>
             </nav>
             <div class="wr-phone">
                 <a class="text-uppercase" href="#">связаться</a>
             </div>
         </header>
     </div>
-    <section class="box-cen text-center">
-        <img data-tilt class="js-tilt" src="dist/img/logo-2.png" alt="jfuture">
-        <h1 class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-        <div class="box-video">
-            <i data-offset="20" class="parallax bg-3"></i>
-            <iframe width="100%" height="380" src="https://www.youtube.com/embed/R7cNvQkY58" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <i data-offset="40" class="parallax bg-7"></i>
-            <i data-offset="80" class="parallax bg-21"></i>
-        </div>
-        <div class="box-paragraph text-center">
-            <h2 class="text-uppercase">jfuture</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis cum, dolor doloribus,
-                eaque et eveniet explicabo harum illo nulla placeat provident, quidem reiciendis vero! Blanditiis dicta
-                sequi sit voluptatem.</p>
-        </div>
-    </section>
+    <div class="container-fluid over-box">
+        <section class="box-cen text-center">
+            <img class="img-logo" src="dist/img/logo-2.png" alt="jfuture">
+            <h1 class="text-uppercase">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+            <div class="box-video">
+                <i data-offset="20" class="parallax bg-3"></i>
+                <iframe width="100%" height="380" src="https://www.youtube.com/embed/R7cNvQkY58" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <i data-offset="40" class="parallax bg-7"></i>
+                <i data-offset="80" class="parallax bg-21"></i>
+            </div>
+            <div class="box-paragraph text-center">
+                <h2 class="text-uppercase">jfuture</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut blanditiis cum, dolor doloribus,
+                    eaque et eveniet explicabo harum illo nulla placeat provident, quidem reiciendis vero! Blanditiis
+                    dicta
+                    sequi sit voluptatem.</p>
+            </div>
+            <i data-offset="80" class="parallax bg-6"></i>
+        </section>
+    </div>
     <div class="about-us text-center">
         <h3 class="text-uppercase">мы уникальны</h3>
         <div class="box box-1 text-center">
             <div class="wr-img">
-                <img class="js-tilt" src="dist/img/about-us-img1.png" alt="family">
+                <img data-tilt src="dist/img/about-us-img1.png" alt="family">
             </div>
             <span>Приобщаем семьи к жизни еврейской общины</span>
         </div>
         <div class="box box-1 text-center">
             <div class="wr-img">
-                <img class="js-tilt" src="dist/img/about-us-img2.png" alt="family">
+                <img data-tilt src="dist/img/about-us-img2.png" alt="family">
             </div>
             <span>Приобщаем семьи к жизни еврейской общины</span>
         </div>
         <div class="box box-1 text-center">
             <div class="wr-img">
-                <img class="js-tilt" src="dist/img/about-us-img3.png" alt="family">
+                <img data-tilt src="dist/img/about-us-img3.png" alt="family">
             </div>
             <span>Приобщаем семьи к жизни еврейской общины</span>
         </div>
+        <i data-offset="70" class="parallax bg-09"></i>
     </div>
     <section class="box-t-principles">
         <h4 class="text-uppercase text-center">НАШИ ПРИНЦИПЫ</h4>
         <div class="wrapper-box">
-            <div class="wr-princi">
+            <div class="wr-princi b-none">
                 <div class="cont-img">
                     <img src="dist/img/im-box-1.jpg" alt="">
                 </div>
@@ -106,7 +120,7 @@
                     <p>Изучение истории и традиции еврейского народа.</p>
                 </div>
             </div>
-            <div class="wr-princi">
+            <div class="wr-princi b-none">
                 <div class="cont-img">
                     <img src="dist/img/im-box-2.jpg" alt="">
                 </div>
@@ -117,7 +131,7 @@
                         основе обучения лежит подход STEAM</p>
                 </div>
             </div>
-            <div class="wr-princi">
+            <div class="wr-princi b-none">
                 <div class="cont-img">
                     <img src="dist/img/im-box-3.png.jpg" alt="">
                 </div>
@@ -128,7 +142,7 @@
                         единому всемирному еврейскому сообществу.</p>
                 </div>
             </div>
-            <div class="wr-princi">
+            <div class="wr-princi b-none">
                 <div class="cont-img">
                     <img src="dist/img/im-box-4.png.jpg" alt="">
                 </div>
@@ -140,12 +154,65 @@
                 </div>
             </div>
         </div>
+        <i data-offset="70" class="parallax bg-09"></i>
     </section>
+
+<!--/////////////////-->
+    <div class="center wrapper-box">
+        <div><div class="wr-princi">
+            <div class="cont-img">
+                <img src="dist/img/im-box-1.jpg" alt="">
+            </div>
+            <div class="princi-description text-left">
+                <h4 class="lain-v">Еврейское
+                    наследие:</h4>
+                <p>Изучение истории и традиции еврейского народа.</p>
+            </div>
+        </div></div>
+        <div><div class="wr-princi">
+            <div class="cont-img">
+                <img src="dist/img/im-box-2.jpg" alt="">
+            </div>
+            <div class="princi-description text-left">
+                <h4 class="lain-v">Новизна
+                    в обучении:</h4>
+                <p>Система уникального творческого и интеллектуального развития, помогающая раскрыть потенциал. В
+                    основе обучения лежит подход STEAM</p>
+            </div>
+        </div></div>
+        <div><div class="wr-princi">
+            <div class="cont-img">
+                <img src="dist/img/im-box-3.png.jpg" alt="">
+            </div>
+            <div class="princi-description text-left">
+                <h4 class="lain-v">Глобальная
+                    еврейская сеть:</h4>
+                <p>Чувство единства еврейского народа вне зависимости от места проживания, чувство принадлежности к
+                    единому всемирному еврейскому сообществу.</p>
+            </div>
+        </div></div>
+        <div><div class="wr-princi">
+            <div class="cont-img">
+                <img src="dist/img/im-box-4.png.jpg" alt="">
+            </div>
+            <div class="princi-description text-left">
+                <h4 class="lain-v">Теплая
+                    семейная атмосфера:</h4>
+                <p>Платформа, где можно обсуждать интересующие темы, учиться, развиваться и чувствовать себя как
+                    дома.</p>
+            </div>
+        </div></div>
+    </div>
+<!--/////////////////-->
+
     <section class="join-bg">
         <div class="content text-center">
-            <h5 class="text-uppercase">СОВМЕСТНОЕ БУДУЩЕЕ </h5>
-            <strong>Все составляющие JFUTURE имеют отношение к наиболее перспективным отраслям нашего будущего</strong>
-            <a class="text-uppercase js-tilt" href="#">СТАТЬ ЧАСТЬЮ</a>
+            <h5 class="text-uppercase">РОДИТЕЛИ И ДЕТИ</h5>
+            <strong>Встречи проводятся в разных форматах: для всех детских групп совместно с родительскими группами или
+                для одной группы детей с одной группой родителей. Специально для этого разрабатываются программы и
+                проекты, где члены семьи принимают участие совместно, что помогает найти общие интересы, сблизить
+                родителей и детей.</strong>
+            <a data-tilt class="text-uppercase" href="#">ПРИСОЕДИНИТЬСЯ</a>
         </div>
     </section>
     <section class="container wr-serv">
@@ -156,7 +223,7 @@
                 развития личности всех возрастных категорий </p>
         </div>
         <div class="row serv-content">
-            <div class="col-lg-6 box">
+            <div class="col-lg-6 col-xs-offset-1 col-md-6 box">
                 <div class="container-img">
                     <img src="dist/img/fa1.jpg" alt="">
                 </div>
@@ -168,7 +235,7 @@
                     заданий, интерактивных упражнений. Частая смена видов деятельности позволяет детям не терять
                     интереса к обучению.</p>
             </div>
-            <div class="col-lg-6 box">
+            <div class="col-lg-6 col-xs-offset-1 col-md-6 box">
                 <div class="container-img">
                     <img src="dist/img/fa2.jpg" alt="">
                 </div>
@@ -179,47 +246,62 @@
                     творческого потенциала детей.</p>
             </div>
         </div>
-    </section>
-    <section class="join-bg">
-        <div class="content text-center">
-            <h5 class="text-uppercase">РОДИТЕЛИ И ДЕТИ</h5>
-            <strong>Встречи проводятся в разных форматах: для всех детских групп совместно с родительскими группами или
-                для одной группы детей с одной группой родителей. Специально для этого разрабатываются программы и
-                проекты, где члены семьи принимают участие совместно, что помогает найти общие интересы, сблизить
-                родителей и детей.</strong>
-            <a class="text-uppercase js-tilt" href="#">ПРИСОЕДИНИТЬСЯ</a>
-        </div>
+        <i data-offset="70" class="parallax bg-4"></i>
+        <i data-offset="50" class="parallax bg-5"></i>
+        <i data-offset="80" class="parallax bg-6"></i>
+        <i data-offset="90" class="parallax bg-8"></i>
+        <i data-offset="20" class="parallax bg-229"></i>
+        <i data-offset="40" class="parallax bg-9"></i>
+        <i data-offset="100" class="parallax bg-10"></i>
+        <i data-offset="80" class="parallax bg-11"></i>
+        <i data-offset="100" class="parallax bg-12"></i>
+        <i data-offset="100" class="parallax bg-13"></i>
+        <i data-offset="50" class="parallax bg-14"></i>
+        <i data-offset="100" class="parallax bg-15"></i>
+        <i data-offset="40" class="parallax bg-16"></i>
+        <i data-offset="70" class="parallax bg-17"></i>
+        <i data-offset="70" class="parallax bg-18"></i>
+        <i data-offset="80" class="parallax bg-19"></i>
+        <i data-offset="80" class="parallax bg-20"></i>
+        <i data-offset="70" class="parallax bg-09"></i>
     </section>
     <section class="wr-map">
         <h5 class="text-uppercase text-center">ПРИСОЕДИНИЛИСЬ К НАМ </h5>
         <div class="box-map">
-            <iframe src="https://snazzymaps.com/embed/98624" width="100%" height="600px" style="border:none;"></iframe>
+            <iframe src="https://snazzymaps.com/embed/98635" width="100%" height="600px" style="border:none;"></iframe>
         </div>
     </section>
     <div class="form container-fluid">
         <h5 class="text-uppercase text-center">СВЯЗЬ С НАМИ </h5>
         <form>
             <div class="row text-center">
-                <div class="col-lg-4 form-group">
+                <div class="col-lg-4 col-xs-4 col-md-4 form-group">
                     <input type="text" class="form-control" placeholder="Имя">
                     <input type="text" class="form-control" placeholder="Ваш Вопрос ?">
                 </div>
-                <div class="col-lg-4 form-group">
+                <div class="col-lg-4 col-xs-4 col-md-4 form-group">
                     <input type="email" class="form-control" placeholder="email address">
-                    <button type="submit" class="btn text-uppercase js-tilt">ОТПРАВИТЬ</button>
+                    <button type="submit" data-tilt class="btn text-uppercase">ОТПРАВИТЬ</button>
                 </div>
-                <div class="col-lg-4 form-group">
+                <div class="col-lg-4 col-xs-4 col-md-4 form-group">
                     <input type="tel" class="form-control" placeholder="+38 (0__) __ __ ___">
                 </div>
             </div>
         </form>
+        <i data-offset="40" class="bafore parallax"></i>
+        <i data-offset="40" class="after parallax"></i>
+        <i data-offset="70" class="parallax bg-4"></i>
+        <i data-offset="50" class="parallax bg-5"></i>
+        <i data-offset="80" class="parallax bg-6"></i>
+        <i data-offset="40" class="parallax bg-9"></i>
+        <i data-offset="70" class="parallax bg-09"></i>
     </div>
     <section class="join-bg two">
-        <div class="content text-center">
+        <div class="content text-center ">
             <h5 class="text-uppercase">JFUTURE</h5>
             <strong>JFUTURE IS CREATED BY WHAT YOU DO TODAY</strong>
-            <div id="counter">
-                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            <div id="counter" class="anim-lov">
+                <span class="love"></span>
                 <span id="counter-p">1037</span>
             </div>
         </div>
@@ -246,7 +328,7 @@
                 </div>
             </div>
             <div class="row box-inf">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-4 col-md-4">
                     <ul>
                         <li><span>Мы свяжемся с Вами </span></li>
                         <li>Почему мы ?</li>
@@ -255,7 +337,7 @@
                         <li>Подать заявку</li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-4 col-md-4">
                     <ul>
                         <li><span>Контакты</span></li>
                         <li>Украина, Харьков</li>
@@ -264,7 +346,7 @@
                         <li>Email: iva23@mail.ru</li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-4 col-md-4">
                     <span class="span-h">Мы свяжемся с Вами</span>
                     <form>
                         <input type="email" class="form-control" placeholder="email address">
@@ -274,42 +356,45 @@
             </div>
         </div>
         <div class="row icon-bar">
-            <div class="col-lg-4">
-                <div class="wr-soc">
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4">
+                <a href="#" class="wr-soc">
                     <img src="dist/img/В.png">
                     <div class="cont">
                         <strong>Twitter</strong>
                         <span>2,033k</span>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-lg-4">
-                <div class="wr-soc">
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4">
+                <a href="#" class="wr-soc">
                     <img src="dist/img/f.png">
                     <div class="cont">
                         <strong>Facebook</strong>
                         <span>2,033k</span>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-lg-4">
-                <div class="wr-soc">
+            <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4">
+                <a href="#" class="wr-soc">
                     <img src="dist/img/i.png">
                     <div class="cont">
                         <strong>Instagram</strong>
                         <span>2,033k</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
+        <i data-offset="70" class="parallax bg-09"></i>
     </footer>
 </div>
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv3AsHyshMioJgOlT2bbciz0Db6ihBJyo&callback=initMap"
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv3AsHyshMioJgOlT2bbciz0Db6ihBJyo&callback=initMap"
         type="text/javascript"></script>
 <script type="text/javascript" src="src/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="src/bootstrap3/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/slick-1.8.1/slick/slick.min.js"></script>
 <script src="src/tilt.js-master/src/tilt.jquery.js"></script> <!-- Load Tilt.js library -->
 <script type="text/javascript" src="dist/js/script.js"></script>
 </body>

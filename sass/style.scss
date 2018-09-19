@@ -44,6 +44,14 @@ a:hover {
       }
       nav.wr-nav {
 
+        .my-mob-btn {
+          background: #f3f3f3;
+
+          span.icon-bar {
+            background: #df8a00;
+          }
+        }
+
         ul {
           display: flex;
           padding: 0;
@@ -55,17 +63,40 @@ a:hover {
             margin: 0 15px;
 
             a {
-              padding: 5px;
+              position: relative;
+              padding: 13px;
               text-decoration: none;
               font: 11px 'Montserrat Bold';
               font-weight: bold;
               color: #000000;
+
+              &:before {
+                content: '';
+                position: absolute;
+                bottom: 9px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 47px;
+                height: 3px;
+                background: #3535ff;
+                opacity: 0;
+                transition: all .3s;
+              }
+              &:hover:before {
+                opacity: 1;
+              }
+              &.active:before {
+                opacity: 1;
+              }
+              &:hover {
+                background: transparent;
+              }
             }
           }
         }
       }
       .wr-phone {
-
+        overflow: hidden;
         a {
           position: relative;
           line-height: 45px;
@@ -78,15 +109,15 @@ a:hover {
           &:before {
             position: absolute;
             content: "";
-            left: 0;
+            left: -40px;
             bottom: 0;
-            width: 76px;
+            width: 100%;
             height: 3px;
             background: #8c8c8c;
             transition: all .3s ease;
           }
           &:hover:before {
-            width: 100%;
+            left: 0;
           }
         }
       }
@@ -97,10 +128,14 @@ a:hover {
     max-width: 800px;
     margin: 0 auto;
 
-    img {
+    img.img-logo {
       display: block;
       width: 100%;
       margin-bottom: 28px;
+      transition: all .3s ease;
+      &:hover {
+        transform: perspective(500px) translateZ(30px);
+      }
     }
     iframe {
       margin-bottom: 42px;
@@ -127,6 +162,8 @@ a:hover {
   .about-us {
     max-width: 850px;
     margin: 0 auto 117px;
+    position: relative;
+    overflow: hidden;
 
     h3 {
       margin-bottom: 70px;
@@ -155,6 +192,7 @@ a:hover {
   .box-t-principles {
     width: 100%;
     margin: 0 auto 50px;
+    position: relative;
     overflow: hidden;
 
     h4 {
@@ -167,7 +205,7 @@ a:hover {
       display: flex;
       .wr-princi {
         display: inline-block;
-        width: 25%;
+        width: 24.5%;
         vertical-align: top;
 
         .cont-img {
@@ -177,7 +215,11 @@ a:hover {
           overflow: hidden;
           max-height: 690px;
           margin: 0 -30px;
+          transition: all .3s;
 
+          &:hover {
+            transform: skew(20deg, 0) scale(1);
+          }
           img {
             transform: skew(-20deg, 0);
           }
@@ -200,6 +242,20 @@ a:hover {
       }
     }
   }
+  .wr-princi {
+    display: inline-block;
+    width: 24.5%;
+    vertical-align: top;
+
+    .cont-img {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 690px;
+      margin: 0 -30px;
+      transition: all .3s;
+    }
+  }
   /////////
   h5 {
     font-size: 34px;
@@ -209,15 +265,33 @@ a:hover {
   }
   .join-bg {
     position: relative;
-    background: url("../img/bg-join1.png"),
-    url("../img/bpx-1i.png") center no-repeat,
+    background: url("../img/bpx-1i.png") center no-repeat,
     url("../img/bpx-2i.png") right,
     url("../img/bpx-2i.png") left,
     url("../img/bpx-2i.png") bottom,
     url("../img/bpx-2i.png") center;
     background-size: cover;
-    height: 410px;
+    height: 550px;
     margin-bottom: 130px;
+    overflow: hidden;
+    &:after {
+      position: absolute;
+      content: url("../img/adb10.png");
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      background: url("../img/bg-join1.png");
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -2;
+    }
 
     .content {
       position: absolute;
@@ -259,7 +333,31 @@ a:hover {
   .wr-serv {
     max-width: 1127px;
     margin: 0 auto 142px;
+    position: relative;
+    overflow: hidden;
 
+    .bg-9 {
+      left: 50%;
+      top: 810px;
+    }
+
+    .bg-229 {
+      width: 40px;
+      height: 40px;
+      left: 10%;
+      top: 310px;
+      background: url(../img/bg-12.png) center no-repeat;
+    }
+    .bg-11 {
+      top: 1500px;
+      left: 70%;
+    }
+    .bg-8 {
+      top: 725px;
+    }
+    .bg-6 {
+      top: 1035px;
+    }
     .caption {
       margin: 0 auto 80px;
       max-width: 850px;
@@ -298,17 +396,56 @@ a:hover {
   ///////
   .wr-map {
     width: 100%;
-    margin-bottom: 210px;
 
     h5 {
       margin-bottom: 51px;
     }
     .box-map {
       background: #dbdad7;
-      height: 425px;
     }
   }
   .form {
+    padding-top: 210px;
+    position: relative;
+    overflow: hidden;
+
+    .bg-4 {
+      top: 1075px;
+      left: 462px;
+    }
+    .bg-6 {
+      top: 783px;
+      right: 215px;
+    }
+    .bg-9 {
+      top: 812px;
+      left: 796px;
+    }
+    .bg-09 {
+      z-index: -1;
+      &:after {
+        content: url("../img/bpx-2i.png");
+
+      }
+    }
+    .bafore {
+      position: absolute;
+      top: 450px;
+      left: -230px;
+      &:before {
+        display: block;
+        content: url("../img/bg-max.png");
+      }
+    }
+    .after {
+      position: absolute;
+      bottom: -325px;
+      right: -230px;
+      &:after {
+        display: block;
+        content: url("../img/bg-max.png");
+      }
+    }
 
     form {
       max-width: 1125px;
@@ -345,6 +482,7 @@ a:hover {
     }
     button {
       background: #3535ff;
+      color: #ffffff;
       padding: 24px 85px;
       border-radius: 10px;
       font: 18px 'Montserrat Bold';
@@ -364,12 +502,52 @@ a:hover {
       span {
         font-size: 40px;
       }
-      span.glyphicon {
+      span.love {
         display: block;
+      }
+      #counter-p {
+        position: absolute;
+        color: #ffffff;
+        font-size: 34px;
+        font-family: 'MontserratMedium', sans-serif;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        transition: all .3s ease;
+        opacity: 0;
+        &.intro {
+          opacity: 1;
+        }
       }
       div#counter {
         user-select: none;
         cursor: pointer;
+        width: 192px;
+        height: 188px;
+        position: relative;
+        margin: 0 auto;
+        span.love {
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: url("../img/kav.png");
+          }
+        }
+      }
+      .anim-lov {
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes example {
+        from {
+          transform: perspective(500px) translateZ(30px);
+        }
+        to {
+          transform: perspective(500px) translateZ(0);
+        }
       }
     }
   }
@@ -390,19 +568,15 @@ a:hover {
       justify-content: space-between;
       .wr-photo {
         max-width: 400px;
+        margin: 0 10px;
 
         .photo {
           margin: 0 auto;
           display: flex;
           justify-content: center;
           align-items: center;
-
-          strong {
-            font: 42px 'MontserratMedium';
-            color: #000;
-            width: 235px;
-            display: inline-block;
-            text-align: center;
+          img {
+            width: 100%;
           }
         }
       }
@@ -462,15 +636,17 @@ a:hover {
           border: 1px solid #000000;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
-          width: 30%;
+          width: 29.5%;
           height: 100%;
           outline: none;
+          vertical-align: top;
         }
       }
     }
   }
   footer {
-
+    position: absolute;
+    overflow: hidden;
     .icon-bar {
 
       div.col-lg-4 {
@@ -478,11 +654,20 @@ a:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         .wr-soc {
           display: flex;
           color: #fff;
 
+          &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          }
           img {
             margin-right: 7px;
           }
@@ -725,3 +910,165 @@ i.parallax {
   left: -50px;
   background: url("../img/bg-12.png") center no-repeat;
 }
+
+//footer parallax
+.bg-09 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  &:before {
+    content: url(../img/bpx-2i.png);
+
+  }
+}
+
+.over-box {
+  overflow: hidden
+}
+
+body:last-child:not(:root:root) {
+  .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
+    transform: skew(-20deg, 0) translateX(-50%) !important;
+  }
+}
+
+//slider
+.cont-img {
+  max-height: 300px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and(max-width: 1200px) {
+  .main .container-fluid.wrapper .header nav.wr-nav ul li {
+    margin: 0 5px;
+  }
+  .main .wrapper .box-inf form button {
+    font-size: 100%;
+  }
+}
+
+@media only screen and(max-width: 980px) {
+  .main .container-fluid.wrapper .header nav.wr-nav ul li a {
+    padding: 5px;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul {
+    margin-top: 10px;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul li a:before {
+    bottom: 0;
+  }
+  .main .container-fluid.wrapper .header .wr-phone a {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+  .main .container-fluid.wrapper .header .wr-phone {
+    padding-right: 50px;
+  }
+}
+
+@media only screen and(max-width: 770px) {
+  .main .box-t-principles .wrapper-box .wr-princi.b-none {
+    display: none;
+  }
+  .slick-next.slick-arrow {
+    display: none;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul {
+    display: block;
+  }
+  .wr-nav.navbar {
+    width: 100%;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav .my-mob-btn {
+    margin-top: 2px;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul li {
+    text-align: center;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul li a {
+    display: inline-block;
+  }
+  .main .about-us .box {
+    margin-bottom: 15px;
+  }
+  .main .form button {
+    padding: 16px 50px;
+  }
+  .main .box-t-principles .wrapper-box {
+    display: block;
+  }
+  .main .box-t-principles .wrapper-box .wr-princi .cont-img {
+    transform: skew(0deg, 0) scale(.9);
+  }
+  .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
+    transform: skew(0deg, 0);
+  }
+  .main .box-t-principles .wrapper-box .wr-princi .cont-img:hover {
+    transform: skew(0deg, 0);
+    img {
+      transform: skew(0deg, 0) scale(1);
+    }
+  }
+  .main .box-t-principles .wrapper-box .wr-princi {
+    width: 33%;
+  }
+  .main .wr-princi {
+    width: 100%;
+  }
+  .wr-princi {
+    width: 100%;
+  }
+  .main .wr-princi .cont-img {
+    max-height: 400px;
+    img {
+      width: 100%;
+    }
+  }
+  .slick-slide.slick-current.slick-active.slick-center {
+    transition: all .3s;
+    transform: perspective(500px) translateZ(50px);
+  }
+  .slick-slide {
+    padding: 33px;
+  }
+  .slick-list {
+    width: 100%;
+    margin: 0 -8px;
+  }
+  .slick-track {
+    padding: 0 12px;
+  }
+  .main h4.lain-v:after {
+    bottom: -7px;
+  }
+  .princi-description p {
+    font-size: 13px;
+  }
+  .main .wr-serv .serv-content .box {
+    margin-bottom: 100px;
+  }
+  .main .wr-serv .serv-content .box .container-img img {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .main .container-fluid.wrapper .header .wr-phone {
+    padding-right: 75px;
+  }
+  .main .wr-princi .cont-img {
+    max-height: 280px;
+  }
+  .main .wr-serv .serv-content .box .container-img img {
+    margin-left: 0;
+  }
+  .main .form button{
+    padding: 14px 25px;
+    font-size: 14px;
+  }
+}
+

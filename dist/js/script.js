@@ -25,12 +25,19 @@ $(document).ready(function () {
         });
 
     });
-    $('.js-tilt').tilt({
-        scale:1.1
-    });
     $('#counter').click(function () {
         $('#counter-p').html(+$('#counter-p').html() + 1);
+        $("#counter-p").addClass("intro");
+        $("#counter").removeClass("anim-lov");
     });
+    // slider
+    $('.center').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+    $(".slick-next.slick-arrow").remove()
+
+
 
 });
 
