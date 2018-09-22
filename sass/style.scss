@@ -28,7 +28,7 @@ a:hover {
   font: 11px 'Montserrat Bold';
 
   .container-fluid.wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     .header {
       display: flex;
@@ -127,6 +127,7 @@ a:hover {
   section.box-cen {
     max-width: 800px;
     margin: 0 auto;
+    padding-top: 10px;
 
     img.img-logo {
       display: block;
@@ -136,10 +137,6 @@ a:hover {
       &:hover {
         transform: perspective(500px) translateZ(30px);
       }
-    }
-    iframe {
-      margin-bottom: 42px;
-      border-radius: 10px;
     }
     h1 {
       font: 26px 'MontserratMedium';
@@ -646,7 +643,7 @@ a:hover {
     }
   }
   footer {
-    position: absolute;
+    position: relative;
     overflow: hidden;
     .icon-bar {
 
@@ -730,6 +727,11 @@ a:hover {
 //parallax
 .box-video {
   position: relative;
+  margin-bottom: 42px;
+  .wrapper-video{
+    border-radius: 30px;
+    overflow: hidden;
+  }
 }
 
 .scene {
@@ -986,8 +988,11 @@ i.parallax {
   .main .container-fluid.wrapper .header nav.wr-nav ul {
     display: block;
   }
+  .wr-logo {
+    width: 20%;
+  }
   .wr-nav.navbar {
-    width: 100%;
+    width: 80%;
   }
   .main .container-fluid.wrapper .header nav.wr-nav .my-mob-btn {
     margin-top: 2px;
@@ -1066,67 +1071,75 @@ i.parallax {
   .main .wr-serv .serv-content .box .container-img img {
     text-align: center;
   }
-  .slick-next{
+  .slick-next {
     right: 25px;
   }
-  .slick-prev{
+  .slick-prev {
     left: 25px;
     z-index: 1;
   }
-  .slick-prev,.slick-next{
+  .slick-prev, .slick-next {
     width: 50px;
     height: 50px;
   }
-  .slick-prev:before, .slick-next:before{
+  .slick-prev:before, .slick-next:before {
     font-size: 50px;
   }
-  .parallax{
+  .parallax {
     z-index: -1;
   }
-  .main .wr-serv .bg-229{
+  .main .wr-serv .bg-229 {
     left: -3%;
   }
-  .bg-8{
+  .bg-8 {
     right: 50px;
   }
-  .main .wr-serv .bg-9{
+  .main .wr-serv .bg-9 {
     left: 85%;
   }
-  .box-inf{
+  .box-inf {
 
-    >div{
+    > div {
       margin-bottom: 30px;
     }
-    ul{
+    ul {
       display: table;
       margin: 0 auto;
       max-width: 265px;
     }
   }
-  .main .wrapper .box-inf div ul li span, .main .wrapper .box-inf span.span-h{
+  .main .wrapper .box-inf div ul li span, .main .wrapper .box-inf span.span-h {
     font-size: 25px;
   }
-  .main .wrapper .box-inf div ul li{
+  .main .wrapper .box-inf div ul li {
     font-size: 20px;
   }
-  .main .wrapper .box-inf div:last-child{
+  .main .wrapper .box-inf div:last-child {
     max-width: 265px;
     padding-left: 40px;
     float: none;
     margin: 0 auto;
   }
-  .main .wrapper .box-inf form input{
+  .main .wrapper .box-inf form input {
     width: 56%;
   }
-  .main .wrapper .box-inf form button{
+  .main .wrapper .box-inf form button {
     width: 43%;
+  }
+  .main .container-fluid.wrapper .header .wr-phone {
+    position: absolute;
+    left: 23px;
+    top: 85px;
+  }
+  .main .container-fluid.wrapper .header .wr-phone {
+    padding: 0;
+  }
+  .main .container-fluid.wrapper .header nav.wr-nav ul {
+    margin-top: 84px;
   }
 }
 
 @media only screen and(max-width: 600px) {
-  .main .container-fluid.wrapper .header .wr-phone {
-    padding-right: 75px;
-  }
   .main .wr-princi .cont-img {
     max-height: 280px;
   }
@@ -1137,24 +1150,36 @@ i.parallax {
     padding: 14px 25px;
     font-size: 14px;
   }
-  .main .wrapper.over-n .galery{
+  .main .wrapper.over-n .galery {
     display: block;
-    .wr-photo{
+    .wr-photo {
       margin: 0 auto 80px;
     }
+  }
+  .main .join-bg .content a{
+    padding: 17px 35px;
   }
 }
 
 @media only screen and(max-width: 400px) {
-  .main .container-fluid.wrapper .header .wr-phone {
-    position: absolute;
-    left: 23px;
-    top: 85px;
-  }
-  .main h5{
+  .main h5 {
     font-size: 24px;
   }
-  .main .join-bg.two .content h5{
+  .main .join-bg.two .content h5 {
     font-size: 60px;
   }
 }
+
+//safari
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  /* Safari only override */
+  ::i-block-chrome, body {
+
+    .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
+      -webkit-transform: skew(-20deg, 0) translateX(-50%);
+    }
+  }
+
+}
+
