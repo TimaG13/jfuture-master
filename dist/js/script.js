@@ -35,14 +35,19 @@ $(document).ready(function () {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 500,
+                breakpoint: 770,
                 settings: {
                     slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1
                 }
             }
         ]
     });
-    $(".slick-next.slick-arrow").remove()
 
 
 });
