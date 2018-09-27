@@ -18,6 +18,7 @@
 }
 
 //////
+
 a:hover {
   text-decoration: none;
 }
@@ -99,7 +100,6 @@ a:hover {
         overflow: hidden;
         a {
           position: relative;
-          line-height: 45px;
           font-size: 14px;
           color: #000;
           padding: 8px 13px;
@@ -116,13 +116,122 @@ a:hover {
             background: #8c8c8c;
             transition: all .3s ease;
           }
+          &:hover {
+            border-color: transparent;
+          }
           &:hover:before {
-            left: 0;
+            opacity: 0;
           }
         }
       }
     }
   }
+  //hover eff
+  $thick: 3px;
+  $pad: 0.7em;
+  $extra: calc(#{$pad} * 1.2);
+  $color: #8c8c8c;
+
+  .portfolio-experiment {
+
+    a {
+      color: white;
+      padding: $pad $extra;
+      display: inline-block;
+      border: $thick solid transparent;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .line {
+      position: absolute;
+      background: $color;
+
+      &.-right,
+      &.-left {
+        width: $thick;
+        bottom: 0;
+        top: -$thick;
+        transform: scale3d(1, 0, 1);
+      }
+
+      &.-top,
+      &.-bottom {
+        height: $thick;
+        left: -$thick;
+        right: -$thick;
+        transform: scale3d(0, 1, 1);
+      }
+
+      &.-right {
+        right: -$thick;
+        transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.23s;
+        transform-origin: top;
+      }
+
+      &.-top {
+        top: -$thick;
+        transition: transform 0.08s linear 0.43s;
+        transform-origin: left;
+      }
+
+      &.-left {
+        left: -$thick;
+        transition: transform 0.08s linear 0.51s;
+        transform-origin: bottom;
+      }
+
+      &.-bottom {
+        bottom: 0;
+        transition: transform 0.3s cubic-bezier(1, 0, .65, 1.01);
+        transform-origin: right;
+      }
+    }
+
+    a:hover,
+    a:active {
+
+      .text {
+        transform: translate3d(0, 0, 0);
+        transition: transform 0.6s cubic-bezier(.2, 0, 0, 1) 0.4s;
+      }
+
+      &:after {
+        transform: scale3d(0, 1, 1);
+        right: -$thick;
+        left: -$thick;
+        transform-origin: right;
+        transition: transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s,
+        right 0.2s cubic-bezier(1, 0, .65, 1.01),
+        left 0s 0.3s;
+      }
+
+      .line {
+        transform: scale3d(1, 1, 1);
+
+        &.-right {
+          transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.2s;
+          transform-origin: bottom;
+        }
+
+        &.-top {
+          transition: transform 0.08s linear 0.4s;
+          transform-origin: right;
+        }
+
+        &.-left {
+          transition: transform 0.08s linear 0.48s;
+          transform-origin: top;
+        }
+
+        &.-bottom {
+          transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
   ////////
   section.box-cen {
     max-width: 800px;
@@ -188,7 +297,8 @@ a:hover {
   ////////
   .box-t-principles {
     width: 100%;
-    margin: 0 auto 50px;
+    margin: 0 auto;
+    padding-bottom: 50px;
     position: relative;
     overflow: hidden;
 
@@ -728,7 +838,7 @@ a:hover {
 .box-video {
   position: relative;
   margin-bottom: 42px;
-  .wrapper-video{
+  .wrapper-video {
     border-radius: 30px;
     overflow: hidden;
   }
@@ -746,6 +856,7 @@ a:hover {
 
 i.parallax {
   position: absolute;
+  z-index: -5;
 }
 
 .bg-1 {
@@ -1102,11 +1213,6 @@ i.parallax {
     > div {
       margin-bottom: 30px;
     }
-    ul {
-      display: table;
-      margin: 0 auto;
-      max-width: 265px;
-    }
   }
   .main .wrapper .box-inf div ul li span, .main .wrapper .box-inf span.span-h {
     font-size: 25px;
@@ -1115,9 +1221,7 @@ i.parallax {
     font-size: 20px;
   }
   .main .wrapper .box-inf div:last-child {
-    max-width: 265px;
     padding-left: 40px;
-    float: none;
     margin: 0 auto;
   }
   .main .wrapper .box-inf form input {
@@ -1136,6 +1240,10 @@ i.parallax {
   }
   .main .container-fluid.wrapper .header nav.wr-nav ul {
     margin-top: 84px;
+  }
+  .main .wrapper .box-inf form button{
+    font-size: 20px;
+    width: 35%;
   }
 }
 
@@ -1156,8 +1264,16 @@ i.parallax {
       margin: 0 auto 80px;
     }
   }
-  .main .join-bg .content a{
+  .main .join-bg .content a {
     padding: 17px 35px;
+  }
+  .main .wrapper .box-inf div:last-child {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .main .wrapper .box-inf form button{
+    font-size: 18px;
+    width: 43%;
   }
 }
 
@@ -1168,18 +1284,21 @@ i.parallax {
   .main .join-bg.two .content h5 {
     font-size: 60px;
   }
-}
-
-//safari
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-
-  /* Safari only override */
-  ::i-block-chrome, body {
-
-    .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
-      -webkit-transform: skew(-20deg, 0) translateX(-50%);
-    }
+  .box-inf ul {
+    margin: 0 auto;
+    max-width: 265px;
   }
-
 }
+  //safari
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    /* Safari only override */
+    ::i-block-chrome, body {
+
+      .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
+        -webkit-transform: skew(-20deg, 0) translateX(-50%);
+      }
+    }
+
+  }
 

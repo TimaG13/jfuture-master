@@ -48,7 +48,17 @@ $(document).ready(function () {
             }
         ]
     });
-
+    $(window).resize(function(){
+        var windowWidth = $(window).width();
+        if(windowWidth < 400) {
+            $(".serv-content .box, .box-inf > div").removeClass("col-xs-8");
+            $(".serv-content .box, .box-inf > div").addClass("col-xs-12");
+        }
+        else {
+            $(".serv-content .box, .box-inf > div").removeClass("col-xs-12");
+            $(".serv-content .box, .box-inf > div").addClass("col-xs-8");
+        }
+    });
 
 });
 
