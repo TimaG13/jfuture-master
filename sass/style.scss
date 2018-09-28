@@ -1117,14 +1117,15 @@ i.parallax {
   .main .box-t-principles .wrapper-box .wr-princi .princi-description {
     padding: 35px 5px;
   }
+  .main .container-fluid.wrapper .header .wr-phone a{
+    margin-right: 35px;
+  }
 }
 @media only screen and(max-width: 1024px) {
   .main .container-fluid.wrapper .header{
     padding: 30px 0;
   }
-  .main .container-fluid.wrapper .header .wr-phone a{
-    margin-right: 35px;
-  }
+
   .bg-4{
     top: 512px;
   }
