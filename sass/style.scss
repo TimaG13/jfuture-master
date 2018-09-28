@@ -358,11 +358,11 @@ a:hover {
           margin: 0 -30px;
 
 
-          &:hover img{
-            transition: all .2s;
-            z-index: 11;
-            transform: skew(-20deg, 0) perspective(500px) translateZ(30px);
-          }
+          //&:hover img{
+          //  transition: all .2s;
+          //  z-index: 11;
+          //  transform: skew(-20deg, 0) perspective(500px) translateZ(30px);
+          //}
           img {
             transition: all .3s;
             transform: skew(-20deg, 0);
