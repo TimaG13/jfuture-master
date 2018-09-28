@@ -376,6 +376,7 @@ a:hover {
             color: #010101;
             margin-top: 0;
             margin-bottom: 40px;
+            white-space: nowrap;
           }
           p {
             font: 22px 'MontserratMedium';
@@ -886,6 +887,14 @@ a:hover {
 .box-video {
   position: relative;
   margin-bottom: 42px;
+  &:after{
+    position: absolute;
+    content: url("../img/scroll .png");
+    top: -115px;
+    z-index: -5;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .wrapper-video {
     border-radius: 30px;
     overflow: hidden;
