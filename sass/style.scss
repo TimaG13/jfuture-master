@@ -34,7 +34,7 @@ a:hover {
     .header {
       display: flex;
       justify-content: space-between;
-      padding: 30px 0;
+      padding: 30px 120px;
 
       .wr-logo {
 
@@ -46,7 +46,6 @@ a:hover {
       nav.wr-nav {
 
         .my-mob-btn {
-          background: #f3f3f3;
 
           span.icon-bar {
             background: #df8a00;
@@ -67,7 +66,7 @@ a:hover {
               position: relative;
               padding: 13px;
               text-decoration: none;
-              font: 11px 'Montserrat Bold';
+              font: 16px 'Montserrat Bold';
               font-weight: bold;
               color: #000000;
 
@@ -100,10 +99,10 @@ a:hover {
         overflow: hidden;
         a {
           position: relative;
-          font-size: 14px;
+          font-size: 20px;
           color: #000;
           padding: 8px 13px;
-          border: 3px solid #8c8c8c;
+          border: 3px solid #262626;
           border-bottom: none;
           transition: all .3s ease;
           &:before {
@@ -113,7 +112,7 @@ a:hover {
             bottom: 0;
             width: 100%;
             height: 3px;
-            background: #8c8c8c;
+            background: #262626;
             transition: all .3s ease;
           }
           &:hover {
@@ -130,7 +129,7 @@ a:hover {
   $thick: 3px;
   $pad: 0.7em;
   $extra: calc(#{$pad} * 1.2);
-  $color: #8c8c8c;
+  $color: #262626;
 
   .portfolio-experiment {
 
@@ -234,7 +233,7 @@ a:hover {
 
   ////////
   section.box-cen {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     padding-top: 10px;
 
@@ -242,13 +241,14 @@ a:hover {
       display: block;
       width: 100%;
       margin-bottom: 28px;
+      padding: 0 50px;
       transition: all .3s ease;
       &:hover {
-        transform: perspective(500px) translateZ(30px);
+        transform:scale(1.1);
       }
     }
     h1 {
-      font: 26px 'MontserratMedium';
+      font: 33px 'MontserratMedium';
       color: #000000;
       display: block;
       margin-bottom: 150px;
@@ -257,28 +257,35 @@ a:hover {
       margin-bottom: 124px;
       h2 {
         margin-top: 0;
+        color: #010101;
         margin-bottom: 38px;
+        font: 47px 'Montserrat Bold';
       }
       p {
-        font: 18px 'MontserratMedium';
+        letter-spacing: 0.9px;
+        font: 22px 'MontserratMedium';
       }
     }
   }
   ////////
   .about-us {
-    max-width: 850px;
+    max-width: 1100px;
     margin: 0 auto 117px;
     position: relative;
     overflow: hidden;
+    font-size: 0;
 
     h3 {
       margin-bottom: 70px;
+      font-size: 47px;
+      color: #010101;
     }
 
     .box {
       display: inline-block;
-      max-width: 208px;
-      max-height: 180px;
+      max-width: 300px;
+      max-height: 240px;
+      vertical-align: top;
       margin: 0 30px;
       transition: all .3s;
 
@@ -288,9 +295,13 @@ a:hover {
         transition: all .3s;
       }
       span {
-        font-size: 20px;
+        font-size: 24px;
         color: #000000;
         font-family: 'MontserratMedium', sans-serif;
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -303,31 +314,57 @@ a:hover {
     overflow: hidden;
 
     h4 {
-      font: 34px 'Montserrat Bold';
+      font: 47px 'Montserrat Bold';
       color: #010101;
       margin-top: 0;
       margin-bottom: 35px;
     }
     .wrapper-box {
+      z-index: -2;
       display: flex;
+      justify-content: center;
+      .wr-princi.b-1, .wr-princi.b-2 {
+        z-index: 0;
+        .cont-img {
+          overflow: visible;
+          img{
+            position: relative;
+          }
+          & i{
+            position: absolute;
+
+            height: 11px;
+            right: 0;
+            left: 0;
+            background: #fff;
+          }
+          &:hover img{
+
+          }
+        }
+      }
       .wr-princi {
         display: inline-block;
-        width: 24.5%;
+        max-width: 450px;
         vertical-align: top;
+        z-index: 1;
 
         .cont-img {
           display: flex;
           justify-content: center;
-          transform: skew(20deg, 0) scale(.9);
+          transform: skew(20deg, 0) ;
           overflow: hidden;
-          max-height: 690px;
+          max-height: 630px;
           margin: 0 -30px;
-          transition: all .3s;
 
-          &:hover {
-            transform: skew(20deg, 0) scale(1);
+
+          &:hover img{
+            transition: all .2s;
+            z-index: 11;
+            transform: skew(-20deg, 0) perspective(500px) translateZ(30px);
           }
           img {
+            transition: all .3s;
             transform: skew(-20deg, 0);
           }
         }
@@ -335,14 +372,13 @@ a:hover {
           padding: 45px 50px;
 
           h4 {
-            font: 26px 'Montserrat Bold';
+            font: 28px 'Montserrat Bold';
             color: #010101;
             margin-top: 0;
             margin-bottom: 40px;
           }
           p {
-            font: 18px 'MontserratMedium';
-            font-weight: bold;
+            font: 22px 'MontserratMedium';
             color: #000000;
           }
         }
@@ -365,7 +401,7 @@ a:hover {
   }
   /////////
   h5 {
-    font-size: 34px;
+    font-size: 47px;
     color: #010101;
     font-weight: bold;
     margin-bottom: 35px;
@@ -405,7 +441,8 @@ a:hover {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 1000px;
+      max-width: 1300px;
+      min-width: 1000px;
 
       strong {
         font: 18px 'MontserratMedium';
@@ -418,7 +455,7 @@ a:hover {
         padding: 25px 67px;
         border-radius: 10px;
         color: #ffffff;
-        font-size: 18px;
+        font: 22px "Montserrat Bold";
         background: #3535ff;
       }
     }
@@ -438,7 +475,7 @@ a:hover {
   }
   ///////
   .wr-serv {
-    max-width: 1127px;
+    max-width: 1400px;
     margin: 0 auto 142px;
     position: relative;
     overflow: hidden;
@@ -469,13 +506,9 @@ a:hover {
       margin: 0 auto 80px;
       max-width: 850px;
       h5 {
-        font-size: 34px;
+        font: 47px "Montserrat Bold";
         color: #010101;
         margin-bottom: 40px;
-      }
-      p {
-        font: 18px 'MontserratMedium';
-        color: #000000;
       }
     }
     .serv-content {
@@ -491,11 +524,16 @@ a:hover {
         }
         h4 {
           margin-bottom: 42px;
-          font-size: 26px;
+          font: 28px "Montserrat Bold";
         }
         p {
-          font: 18px 'MontserratMedium';
+          font: 20px 'MontserratMedium';
           color: #000000;
+          a {
+            color: inherit;
+            display: inline-block;
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -555,7 +593,7 @@ a:hover {
     }
 
     form {
-      max-width: 1125px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 45px 0 75px 0;
 
@@ -567,7 +605,7 @@ a:hover {
         outline: none;
         box-shadow: none;
         height: auto;
-        font: 20px 'MontserratMedium';
+        font: 22px 'MontserratMedium';
         margin-bottom: 55px;
         padding: 11px 7px;
         background: transparent;
@@ -593,34 +631,44 @@ a:hover {
       color: #ffffff;
       padding: 24px 85px;
       border-radius: 10px;
-      font: 18px 'Montserrat Bold';
+      font: 22px 'Montserrat Bold';
     }
   }
   .join-bg.two {
 
     .content {
       h5 {
-        font-size: 80px;
+        font: 92px "Montserrat Bold";
         color: #000000;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
       strong {
-        font: 27px 'MontserratMedium';
+        font: 28px 'MontserratMedium';
+        margin-bottom: 10px;
       }
       span {
-        font-size: 40px;
-      }
-      span.love {
+        font: 40px 'MontserratMedium';
+        letter-spacing: -0.5px;
         display: block;
+        margin-bottom: 60px;
+      }
+      .anim-lov {
+        span {
+          font-size: 40px;
+        }
+        span.love {
+          display: block;
+        }
       }
       #counter-p {
         position: absolute;
         color: #ffffff;
-        font-size: 34px;
+        font-size: 33px;
         font-family: 'MontserratMedium', sans-serif;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 15px;
+        top: 65%;
+        bottom: -40;
         transition: all .3s ease;
         opacity: 0;
         &.intro {
@@ -666,7 +714,7 @@ a:hover {
     h6 {
       max-width: 1365px;
       margin: 0 auto 100px;
-      font: 24px 'MontserratMedium';
+      font: 34px 'MontserratMedium';
     }
     .galery {
       margin-bottom: 160px;
@@ -716,7 +764,7 @@ a:hover {
         }
       }
       span.span-h {
-        font-size: 18px;
+        font-size: 22px;
         color: #000000;
         font-weight: bold;
         display: block;
@@ -739,7 +787,7 @@ a:hover {
           color: #000000;
           padding: 0;
           background: transparent;
-          font-size: 16px;
+          font-size: 18px;
           border-radius: 0;
           border: 1px solid #000000;
           border-top-right-radius: 15px;
@@ -841,6 +889,8 @@ a:hover {
   .wrapper-video {
     border-radius: 30px;
     overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
@@ -1052,6 +1102,11 @@ i.parallax {
   }
 }
 
+@media only screen and(max-width: 1300px) {
+  .main .container-fluid.wrapper .header{
+    padding: 30px 50px;
+  }
+}
 @media only screen and(max-width: 1200px) {
   .main .container-fluid.wrapper .header nav.wr-nav ul li {
     margin: 0 5px;
@@ -1059,8 +1114,30 @@ i.parallax {
   .main .wrapper .box-inf form button {
     font-size: 100%;
   }
+  .main .box-t-principles .wrapper-box .wr-princi .princi-description {
+    padding: 35px 5px;
+  }
 }
-
+@media only screen and(max-width: 1024px) {
+  .main .container-fluid.wrapper .header{
+    padding: 30px 0;
+  }
+  .main .container-fluid.wrapper .header .wr-phone a{
+    margin-right: 35px;
+  }
+  .bg-4{
+    top: 512px;
+  }
+  .bg-5{
+    top: 545px;
+  }
+  .main .wr-serv .bg-9{
+    left: 44%;
+  }
+  .main .wr-serv .bg-11{
+    left: 47%;
+  }
+}
 @media only screen and(max-width: 980px) {
   .main .container-fluid.wrapper .header nav.wr-nav ul li a {
     padding: 5px;
@@ -1078,15 +1155,53 @@ i.parallax {
   .main .container-fluid.wrapper .header .wr-phone {
     padding-right: 50px;
   }
+  .main .container-fluid.wrapper .header nav.wr-nav ul{
+    margin-top: 0;
+  }
+  .box-inf>div{
+    float: none;
+    margin: 0 auto 40px;
+    max-width: 70%;
+    text-align: center;
+  }
+  .main .form button {
+    padding: 16px 50px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: -160px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .main .wr-serv .serv-content .box {
+    float: none;
+    margin: 0 auto 100px;
+  }
+  .main .join-bg.two .content h5{
+    font-size: 80px;
+  }
+  .main .join-bg.two .content span{
+    font-size: 30px;
+  }
+  .main .join-bg.two .content strong{
+    font-size: 22px;
+  }
+  .main .join-bg .content{
+    min-width: 390px;
+  }
+  .main h5,.main h6,.main h4,.main h3,.main h2,.main h5,.main h1,.main .wr-serv .caption h5{
+    font-size: 30px;
+  }
 }
 
-@media screen and (min-device-width: 770px) {
+@media screen and (min-device-width: 768px) {
   .center.wrapper-box.slick-initialized.slick-slider {
     display: none;
   }
 }
 
-@media only screen and(max-width: 770px) {
+@media only screen and(max-width: 768px) {
   .main .box-t-principles {
     display: none;
   }
@@ -1241,7 +1356,7 @@ i.parallax {
   .main .container-fluid.wrapper .header nav.wr-nav ul {
     margin-top: 84px;
   }
-  .main .wrapper .box-inf form button{
+  .main .wrapper .box-inf form button {
     font-size: 20px;
     width: 35%;
   }
@@ -1271,7 +1386,7 @@ i.parallax {
     margin: 0 auto;
     max-width: 100%;
   }
-  .main .wrapper .box-inf form button{
+  .main .wrapper .box-inf form button {
     font-size: 18px;
     width: 43%;
   }
@@ -1288,17 +1403,34 @@ i.parallax {
     margin: 0 auto;
     max-width: 265px;
   }
-}
-  //safari
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-
-    /* Safari only override */
-    ::i-block-chrome, body {
-
-      .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
-        -webkit-transform: skew(-20deg, 0) translateX(-50%);
-      }
-    }
-
+  .box-inf ul{
+    padding: 0;
   }
+  .box-inf>div{
+    max-width: 100%;
+  }
+  .main .join-bg .content{
+    min-width: 100%;
+    strong{
+      font-size: 14px;
+      padding: 0 20px;
+    }
+  }
+  strong{
+    font-size: 15px
+  }
+}
+
+//safari
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  /* Safari only override */
+  ::i-block-chrome, body {
+
+    .main .box-t-principles .wrapper-box .wr-princi .cont-img img {
+      -webkit-transform: skew(-20deg, 0) translateX(-50%);
+    }
+  }
+
+}
 
